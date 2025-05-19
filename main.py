@@ -5,7 +5,6 @@ import torch.nn as nn
 import torch
 from torchvision import models, transforms, datasets
 import pickle
-import cv2
 
 
 # Настройки страницы
