@@ -16,9 +16,9 @@ st.write("Загрузите изображение животного, и мо�
 
 # Список классов (замените на ваши реальные классы)
 CLASS_NAMES = [
-    "Alces", "Bison", "Canis lupus", "Capreolus", "Cnipon",
-    "Lepus", "Lutra", "Lynx", "Martes", "Meles",
-    "Neovison", "Nyctereutes", "OTHER ANIMAL", "Putorius", "Sus"
+    "Лось", "Бизон", "Волк", "Косуля", "Cnipon",
+    "Заяц", "Выдра", "Лиса", "Куница", "Барсуки",
+    "Норка", "Енотовидная собака", "OTHER ANIMAL", "Хорёк", "Кабан"
 ]
 
 
@@ -63,7 +63,7 @@ if __name__ ==  '__main__':
     if uploaded_file is not None:
         # Отображение изображения
         image = Image.open(uploaded_file)
-        st.image(image, caption="Загруженное изображение", use_column_width=True)
+        st.image(image, caption="Загруженное изображение", use_container_width =True)
 
         # Кнопка для классификации
         if st.button("Классифицировать"):
