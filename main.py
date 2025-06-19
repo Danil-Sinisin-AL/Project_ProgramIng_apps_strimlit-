@@ -41,20 +41,10 @@ def predict(image, model):
     img_tensor  = img_tensor.unsqueeze(0)
     #Преобразование изображения для модели
 
-    # img = image.resize((224, 224))  # Размер должен соответствовать ожиданиям модели
-    # img_array = np.array(img)
-    # img_array = np.expand_dims(img_array, axis=0)
-
     outputs = model(img_tensor)
     _, pred_idx = torch.max(outputs,1)
     probs = max(torch.nn.functional.softmax(outputs, dim=1)[0])
 
-    # Здесь должно быть предсказание модели (замените на ваш код)
-    # prediction = model.predict(img_array)
-    # predicted_class = CLASS_NAMES[np.argmax(prediction)]
-    # confidence = np.max(prediction)
-
-    # Заглушка для примера (удалите в реальном приложении)
     predicted_class = CLASS_NAMES[pred_idx]
 
     return predicted_class, probs
